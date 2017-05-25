@@ -1,0 +1,25 @@
+[package]
+name = "mathematical"
+version = "0.0.1"
+authors = ["Garen J. Torikian <gjtorikian@gmail.com>"]
+description = "Convert MathML into SVG."
+documentation = "https://docs.rs/mathematical"
+homepage = "https://github.com/gjtorikian/mathematical-rs"
+repository = "https://github.com/gjtorikian/mathematical-rs"
+license = "MIT"
+categories = ["text-processing", "parsing", "command-line-utilities"]
+
+[badges]
+travis-ci = { repository = "gjtorikian/mathematical" }
+
+[profile.release]
+lto = true
+
+[[bin]]
+name = "mathem"
+
+[dependencies]
+clap = { version = "2.22.2", optional = true }
+
+[features]
+default = ["clap"]
